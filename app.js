@@ -7,7 +7,7 @@ function showText(tag, texto){
 }
 
 showText('h1', 'Jogo do número secreto');
-showText('p', 'Escolha um número entre 1 e 10');
+showText('p', 'Escolha um número entre 1 e 40');
 
 function verificarChute(){
     let chute =  document.querySelector('input').value;
@@ -31,7 +31,7 @@ function verificarChute(){
     }
 }
 function gerarNumeroAleatorio(){
-    let NumeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let NumeroEscolhido = parseInt(Math.random() * 40 + 1);
     let quantidadeElementos = listaDeNumerosSorteados.length;
     if (quantidadeElementos == 100){
         listaDeNumerosSorteados = [];
@@ -52,7 +52,7 @@ function limparCampo(){
 
 function reiniciarJogo(){
     showText('h1', 'Jogo do número secreto');
-    showText('p', 'Escolha um número entre 1 e 10');
+    showText('p', 'Escolha um número entre 1 e 40');
     numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
     tentativas = 1;
